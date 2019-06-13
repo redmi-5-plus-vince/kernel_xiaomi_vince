@@ -61,7 +61,7 @@ extern int change_par_buf;
 extern int LCM_effect[4];
 
 #ifdef CONFIG_KLAPSE
-#include "klapse.h"
+#include <linux/klapse.h>
 #endif
 
 #ifdef CONFIG_FB_MSM_TRIPLE_BUFFER

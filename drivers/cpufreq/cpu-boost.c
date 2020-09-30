@@ -22,6 +22,7 @@
 #include <linux/sched.h>
 #include <linux/slab.h>
 #include <linux/time.h>
+#include <linux/battery_saver.h>
 
 struct cpu_sync {
   int cpu;
@@ -232,8 +233,8 @@ static void cpuboost_input_event(struct input_handle *handle, unsigned int type,
                                  unsigned int code, int value) {
   u64 now;
 
-  if (!input_boost_enabled)
-    return;
+	if (!input_boost_enabled || is_battery_saver_on())
+		return;
 
   now = ktime_to_us(ktime_get());
   if ((now - last_input_time) < (input_boost_ms * USEC_PER_MSEC))

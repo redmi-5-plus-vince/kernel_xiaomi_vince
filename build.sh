@@ -6,7 +6,7 @@
 #
 
 export DEVICE="VINCE"
-export CONFIG="vince-perf_defconfig"
+export CONFIG="vince_defconfig"
 export CHANNEL_ID="$ID"
 export TELEGRAM_TOKEN="$BOT_API_KEY"
 export TC_PATH="$HOME/toolchains"

@@ -121,3 +121,6 @@ kernel/configs/android-*.cfg
 
 # Ignore /out
 out/
+
+# Ignore Flasher Dir
+Flasher/
